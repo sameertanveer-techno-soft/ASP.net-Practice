@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirestMVCApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,8 @@ namespace FirestMVCApp.Controllers
     {
        public ActionResult Index()
         {
-            return View();
+            var data = GetEmployees();
+            return View(data);
         }
         public ActionResult About()
         {
@@ -19,6 +21,15 @@ namespace FirestMVCApp.Controllers
         public ActionResult ContactUs()
         {
             return View();
+        }
+        public Employee GetEmployees()
+        {
+            return new Employee()
+            {
+                Id = 1,
+                Name = "Sameer"
+
+            };
         }
     }
 }

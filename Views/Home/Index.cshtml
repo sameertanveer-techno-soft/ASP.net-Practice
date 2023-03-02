@@ -1,4 +1,4 @@
-﻿
+﻿@model FirestMVCApp.Models.Employee
 <!DOCTYPE html>
 
 <html>
@@ -9,6 +9,16 @@
 <body>
     <div> 
         <h1>Home</h1>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>@Model.Id</td>
+                <td>@Model.Name</td>
+            </tr>
+        </table>
         <ul>
             <li><a href="/Home/About">About</a></li>
             <li><a href="/Home/ContactUs">Contact Us</a></li>
